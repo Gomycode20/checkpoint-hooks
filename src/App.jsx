@@ -5,7 +5,14 @@ import MovieForm from './components/MovieForm'
 
 function App() {
 
-    const [movies, setMovies] = useState([])
+    const [movies, setMovies] = useState([
+        {
+            title: '',
+            description: '',
+            poster: '',
+            rating: 5
+        },
+    ])
 
     return (
         <div className='app'>
