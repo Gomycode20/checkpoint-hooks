@@ -1,28 +1,166 @@
-.app{
+/* Applique une belle police partout */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Conteneur principal */
+.app {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
-.movie-list{
+.movie-container {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
 }
-.movie-form{
+
+/* Style pour la case de filtrage */
+.filter select {
+    background-color: #ffffff;
+    color: #333;
+    padding: 10px 20px;
+    border: 2px solid #4F46E5; /* même bleu que ton bouton ADD */
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    appearance: none; /* enlever le style natif moche */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234F46E5" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    width: 250px;
+    padding: 12px 24px;
+}
+
+/* Effet au survol */
+.filter select:hover {
+    background-color: #f5f5ff;
+}
+
+/* Effet au focus (quand on clique) */
+.filter select:focus {
+    border-color: #4338CA;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.3);
+}
+
+
+/* Ton movie-list reste horizontal */
+.movie-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Formulaire pour ajouter un film */
+.movie-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Carte de film */
+.movie-card {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    height: 780px;
 }
-.movie-card{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    width: 300px;
+
+/* Animation au survol */
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
-.movie-card img{
-    width: 300px;
-    height: 500px;
+
+/* Image du film */
+.movie-card img {
+    width: 100%;
+    height: 450px;
     object-fit: cover;
+}
+
+/* Ajoute des marges aux titres ou aux éléments de texte dans les cartes */
+.movie-card h3, .movie-card p {
+    margin: 10px;
+    color: #333;
+}
+
+button {
+    background-color: #4F46E5; /* Bleu profond */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Effet au survol */
+button:hover {
+    background-color: #4338CA; /* Bleu encore plus foncé */
+    transform: translateY(-2px);
+}
+
+/* Effet au clic */
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.filter-text {
+    background-color: #ffffff;
+    color: #333;
+    padding: 12px 20px;
+    width: 300px;
+    border: 2px solid #4F46E5;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-text:hover {
+    background-color: #f5f5ff;
+}
+
+.filter-text:focus {
+    border-color: #4338CA;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.3);
+}
+
+.rating{
+    margin-top: auto;
 }

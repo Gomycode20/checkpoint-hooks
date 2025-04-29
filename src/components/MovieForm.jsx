@@ -17,12 +17,14 @@ const MovieForm = ({movies, setMovies}) => {
         setMovies([...movies, newMovie])
     }
 
+    
+
     return (
         <div className='movie-form'>
-            <input type="text" placeholder='title' ref={titleRef}/>
-            <input type="text" placeholder='description' ref={descRef}/>
-            <input type="number" placeholder='rating' ref={ratingRef}/>
-            <input type="url" placeholder='poster url' ref={posterRef}/>
+            <input type="text" placeholder='Title' ref={titleRef}/>
+            <input type="text" placeholder='Description' ref={descRef}/>
+            <input type="number" placeholder='Rating' ref={ratingRef}/>
+            <input type="url" placeholder='Poster' ref={posterRef}/>
             <button onClick={handleAdd}>ADD</button>
         </div>
     )
