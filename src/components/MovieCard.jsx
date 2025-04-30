@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom'
+
 const MovieCard = ({ movie }) => {
 
     let stars = [];
@@ -9,14 +11,14 @@ const MovieCard = ({ movie }) => {
     }
 
     return (
-        <div className='movie-card'>
+        <Link to={`/details/${movie.title}`} className='movie-card'>
             <img src={movie.poster} alt="" />
             <h3>{movie.title}</h3>
             <p>{movie.description}</p>
             <div className="rating">
                 {stars}
             </div>
-        </div>
+        </Link>
     );
 };
 

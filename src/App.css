@@ -163,4 +163,8 @@ button:active {
 
 .rating{
     margin-top: auto;
+    height: fit-content;
+}
+.rating *{
+    overflow-y: hidden;
 }
